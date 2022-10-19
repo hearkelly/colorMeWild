@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>colorName</title>
+        <!--font embed-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Pacifico&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <!--end font embed-->
+        <style>
+            body {
+                display:flex;
+                width:62vw;
+                max-width:500px;
+                margin:auto;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                align-content:center;
+                font-family:'Share Tech Mono';
+                background-color:#d5bddb;
+            }
+   
+            input[type="text"] {
+                padding:19px;
+                border-width:0px 0px 6px 0px;
+                border-color:#b85cd6;
+                border-radius:10px;
+                font-size:4vw;
+                text-align:left;
+                font-family:'Share Tech Mono';
+                width:58vw;
+            }
+
+            input[type="button"] {
+                display:block;
+                margin-top:20px;
+                margin-left:auto;
+                margin-right:0;
+                border:0px;
+                font-family:'Pacifico';
+            }
+
+            .input {
+                margin-bottom:3vw;
+            }
+            .row {
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                font-size:4vw;
+                margin-top:5vw;
+                margin-bottom:5vw;
+                height:10vw;
+                font-weight:700;
+            }
+
+            .column {
+                flex:50%;
+                margin:1vw;
+            }
+            #print {
+                width:62vw;
+                height:15.5vw;
+                text-align:center;
+                font-weight:700;
+                font-size:8vw;
+                margin-bottom:5vw;
+                font-family:'Bakbak One';
+                letter-spacing:1vw;
+            }
+            label {
+                display:none;
+            }
+            .include {
+                display:inline-flex;
+            }
+            #colorStack {
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="column" id="print1">
+            </div>
+            <div class="column" id="print2">
+            </div>
+        </div>
+        <div class="input">
+            <label for="name1">1</label>
+            <input type="text" id="name1" name="name1" placeholder="FIRST:" oninput="runThis(this.value)"><br>
+            <input type="checkbox" class="include" id="space1" name="space1" value="1"><label for="space1" class="include">include spaces</label>
+        </div>
+        <div class="input">
+            <label for="name2">2</label>
+            <input type="text" id="name2" name="name2" placeholder="SECOND:" oninput="runThis2(this.value)"><br>
+            <input type="checkbox" class="include" id="space2" name="space2" value="1"><label for="space2" class="include">include spaces</label>
+        </div>
+        <input type="button" id="colorName" value="Color Me Wild!">
+        <div class="menu" id="menu">
+            <input type="button" id="colorStack" value="View Color Stack!">
+        </div>
+        <div id ="print">
+
+        </div>
+        <script src="colorName.js"></script>
+    </body>
+</html>
